@@ -11,17 +11,16 @@ import org.openqa.selenium.support.Color;
 
 import java.io.IOException;
 
-
 public class StepDefinition {
     @Given("^Search Stock in the search box (.+)")
-    public void Search_Stock_in_the_search_box(String Stock) throws IOException {
-        DriverAction.click(By.xpath("//*[@id=\"app-container\"]/div/div[3]/div[2]/div/div/div[1]/div"));
+    public void Search_Stock_in_the_search_box(String Stock) {
+//        DriverAction.click(By.xpath("//*[@id=\"app-container\"]/div/div[3]/div[2]/div/div/div[1]/div"));
         DriverAction.typeText(Locator.search, Stock);
         DriverAction.waitSec(2);
     }
 
     @Then("Verify If its Stock Type")
-    public void verify_if_its_stock_type() throws IOException {
+    public void verify_if_its_stock_type() {
         DriverAction.click(Locator.stock);
         String verify = DriverAction.getElementText(Locator.stock);
         if (verify.equals("Stock")) {
@@ -35,7 +34,7 @@ public class StepDefinition {
     @Then("Click on It")
     public void click_on_it() {
         DriverAction.click(Locator.first, "First Result");
-        DriverAction.waitSec(1);
+        DriverAction.waitSec(3);
     }
 
     @Then("if pop up appear close it")
@@ -45,7 +44,7 @@ public class StepDefinition {
     }
 
     @Then("Show the analytic for one day")
-    public void show_the_analytic_for_one_day() throws IOException {
+    public void show_the_analytic_for_one_day() {
         String heading = DriverAction.getElementText(Locator.heading);
         System.out.println(heading);
         String high1 = DriverAction.getElementText(Locator.high);
@@ -70,7 +69,7 @@ public class StepDefinition {
     }
 
     @Then("Show the analytic for one Week")
-    public void show_the_analytic_for_one_week() throws IOException {
+    public void show_the_analytic_for_one_week() {
         DriverAction.click(Locator.week, "Click on 1w");
         DriverAction.waitSec(5);
         String heading = DriverAction.getElementText(Locator.heading);
@@ -96,7 +95,7 @@ public class StepDefinition {
     }
 
     @Then("Show the analytic for one Month")
-    public void show_the_analytic_for_one_month() throws IOException {
+    public void show_the_analytic_for_one_month() {
         DriverAction.click(Locator.mo, "Click on 1M");
         DriverAction.waitSec(5);
         String heading = DriverAction.getElementText(Locator.heading);
@@ -122,7 +121,7 @@ public class StepDefinition {
     }
 
     @Then("Show the analytic for one year")
-    public void show_the_analytic_for_one_year() throws IOException {
+    public void show_the_analytic_for_one_year() {
         DriverAction.click(Locator.year, "Click on 1y");
         DriverAction.waitSec(5);
         String heading = DriverAction.getElementText(Locator.heading);
@@ -148,7 +147,7 @@ public class StepDefinition {
     }
 
     @Then("Show the analytic for five year")
-    public void show_the_analytic_for_five_year() throws IOException {
+    public void show_the_analytic_for_five_year() {
         DriverAction.click(Locator.year5, "Click on 5y");
         DriverAction.waitSec(5);
         String heading = DriverAction.getElementText(Locator.heading);

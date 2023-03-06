@@ -1,31 +1,37 @@
 Feature: TickerTapeHomepage
 
-  Scenario Outline:Launch Tickertape and search for Wipro
-    Given Search Stock in the search box <Stock>
+  Scenario:Launch Ticker-tape and search for Wipro
+    Given Search Stock in the search box Wipro
     Then Verify If its Stock Type
-    Then Click on It
-    Then if pop up appear close it
-    Then Show the analytic for one day
+    And Click on It
+    And Show the analytic for one day
     Then Show the analytic for one Week
-    Then Show the analytic for one Month
+    And Show the analytic for one Month
     Then Show the analytic for one year
     Then Show the analytic for five year
 
-    Examples:
-      | Stock |
-      | Wipro |
-
-  Scenario Outline:Launch Tickertape and search for TCS
-    Given Search Stock in the search box <Stock>
+  Scenario:Launch Ticker-tape and search for TCS
+    Given Search Stock in the search box TCS
     Then Verify If its Stock Type
-    Then Click on It
-    Then if pop up appear close it
-    Then Show the analytic for one day
-    Then Show the analytic for one Week
-    Then Show the analytic for one Month
+    And Click on It
+    And Show the analytic for one day
+
+  Scenario:Launch Ticker-tape and search for NIIT
+    Given Search Stock in the search box NIIT
+    Then Verify If its Stock Type
+    And Click on It
+    And Show the analytic for one Month
     Then Show the analytic for one year
     Then Show the analytic for five year
 
-    Examples:
-      | Stock |
-      | TCS   |
+  Scenario:Launch Ticker-tape and search for Jindal Steel
+    Given Search Stock in the search box jindal steel
+    Then Verify If its Stock Type
+    And Click on It
+    Then Show the analytic for five year
+
+  Scenario:Launch Ticker-tape and search for Infosys
+    Given Search Stock in the search box Infosys
+    Then Verify If its Stock Type
+    And Click on It
+    Then Show the analytic for five year
