@@ -10,6 +10,9 @@ Feature: TickerTapeHomepage
     Then Show the analytic for one year
     Then Show the analytic for five year
 
+    Scenario: Testing Navigate Back
+      Given Test-Backward
+
   Scenario:Launch Ticker-tape and search for TCS
     Given Search Stock in the search box TCS
     Then Verify If its Stock Type

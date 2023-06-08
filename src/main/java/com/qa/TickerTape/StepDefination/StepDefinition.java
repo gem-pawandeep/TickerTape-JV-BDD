@@ -12,6 +12,36 @@ import org.openqa.selenium.support.Color;
 import java.io.IOException;
 
 public class StepDefinition {
+
+    @Given("Test-Backward")
+    public void back() {
+        DriverAction.navigateToUrl("https://www.amazon.in");
+        DriverAction.navigateBack();
+        DriverAction.refresh();
+        DriverAction.navigateForward();
+        DriverAction.navigateBack();
+        DriverAction.refresh();
+        DriverAction.navigateForward();
+        DriverAction.navigateBack();
+        DriverAction.refresh();
+        DriverAction.navigateForward();
+        DriverAction.navigateBack();
+        DriverAction.refresh();
+        DriverAction.navigateForward();
+        DriverAction.navigateBack();
+        DriverAction.refresh();
+        DriverAction.navigateForward();
+        DriverAction.navigateBack();
+        DriverAction.refresh();
+        DriverAction.navigateForward();
+        DriverAction.navigateBack();
+        DriverAction.refresh();
+        DriverAction.navigateForward();
+        DriverAction.navigateBack();
+        DriverAction.refresh();
+        DriverAction.navigateForward();
+    }
+
     @Given("^Search Stock in the search box (.+)")
     public void Search_Stock_in_the_search_box(String Stock) {
 //        DriverAction.click(By.xpath("//*[@id=\"app-container\"]/div/div[3]/div[2]/div/div/div[1]/div"));
@@ -65,6 +95,7 @@ public class StepDefinition {
             System.out.print("Insights of " + heading + " for 1 day" + "\nHigh " + high + "\nLow " + low + "\nChange -" + change + "\n");
             GemTestReporter.addTestStep("Insights of " + heading + " for 1 day", "High " + high + "<br>Low " + low + "<br>Change -" + change, STATUS.PASS, DriverAction.takeSnapShot());
         }
+        DriverAction.waitSec(2);
         DriverAction.waitSec(2);
     }
 
