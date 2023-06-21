@@ -1,19 +1,17 @@
 {
   "environment": "prod",
   "project_name": "GEMECO-API-JV-BDD",
-  "gemjarSubID": "test_id",
   "email": "pawan2807@gmail.com",
-
   "jewel_user": "pdeep",
-  "jewel_bridge_token": "8b5fc300-0808-43d9-85a9-eeb78fb7f8f81684845308950",
+  "jewel_bridge_token": "",
   "dev": {
-    "browserName": "firefox",
-    "launchUrl": "https://www.tickertape.in/",
-    "browserTimeout": 100
+    "browser_name": "firefox",
+    "launch_url": "https://www.tickertape.in/",
+    "browser_timeout": 100
   },
   "prod": {
-    "browserName": "chrome",
-    "launchUrl": "https://www.tickertape.in/",
-    "browserTimeout": 100
+    "browser_name": "firefox",
+    "launch_url": "https://www.tickertape.in/",
+    "browser_timeout": 100
   }
 }
