@@ -14,7 +14,7 @@
         <dependency>
             <groupId>com.gemecosystem.gemjar</groupId>
             <artifactId>gemjar-core</artifactId>
-            <version>1.2.2</version>
+            <version>1.2.5</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.theokanning.openai-gpt3-java/api -->
